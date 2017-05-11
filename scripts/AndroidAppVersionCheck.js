@@ -5,7 +5,7 @@ var LatestVersion = 213;
 
 //This function will run inside the onload function in the app;
         function CheckVersion() {
-            if (ThisVersion !== LatestVersion) {
+            if (ThisVersion < LatestVersion) {
                 DownloadNewVersion();
             }
         };
