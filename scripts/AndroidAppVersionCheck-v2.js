@@ -2,7 +2,7 @@
 //Inside the app, there will be a variable called "ThisVersion" which states that app's current version
 //Version Record (Update this with every new version, leave decimal point out e.g 2.1.3 = 213)
 var LatestVersion = 212;
-
+alert("Hello! I am an alert box!!");
 //This function will run inside the onload function in the app;
 function CheckVersion() {
         if (ThisVersion < LatestVersion) {
