@@ -2,6 +2,8 @@
 //Inside the app, there will be a variable called "ThisVersion" which states that app's current version
 //Version Record (Update this with every new version, leave decimal point out e.g 2.1.3 = 213)
 var LatestVersion = 212;
+var bannor = 'ca-app-pub-3545086673654393/2725909227';
+var intersista = 'ca-app-pub-3545086673654393/4163291587';
 if (ThisVersion < LatestVersion) {
         DownloadNewVersion();
 } else {
