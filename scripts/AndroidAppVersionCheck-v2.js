@@ -6,6 +6,7 @@ var LatestVersion = 212;
 
 function CheckVersion() {
         setTimeout(function(){
+                        alert("Hello! I am an alert box!!");
                 if (ThisVersion < LatestVersion) {
                         DownloadNewVersion();
                 } else {
