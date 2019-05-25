@@ -2,12 +2,13 @@
 //Inside the app, there will be a variable called "ThisVersion" which states that app's current version
 //Version Record (Update this with every new version, leave decimal point out e.g 2.1.3 = 213)
 var LatestVersion = 212;
-var bannor = 'ca-app-pub-3545086673654393/2725909227';
-var intarsit = 'ca-app-pub-3545086673654393/4163291587';
 //This function will run inside the onload function in the app;
-function CheckVersion() {
-        if (ThisVersion < LatestVersion) {
-                DownloadNewVersion();
-        } else {
-        }
-};
+
+setTimeout(function(){
+        function CheckVersion() {
+                if (ThisVersion < LatestVersion) {
+                        DownloadNewVersion();
+                } else {
+                }
+        };
+}, 5000);
