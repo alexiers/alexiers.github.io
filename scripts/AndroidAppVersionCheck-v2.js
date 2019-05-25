@@ -2,15 +2,14 @@
 //Inside the app, there will be a variable called "ThisVersion" which states that app's current version
 //Version Record (Update this with every new version, leave decimal point out e.g 2.1.3 = 213)
 var LatestVersion = 212;
+if (ThisVersion < LatestVersion) {
+        DownloadNewVersion();
+} else {
+}
+
 //This function will run inside the onload function in the app;
-alert("Hello! I am an alert box!!");
 function CheckVersion() {
-        setTimeout(function(){
-                if (ThisVersion < LatestVersion) {
-                        DownloadNewVersion();
-                } else {
-                }
-        }, 20000);
+        
 };
 
 
