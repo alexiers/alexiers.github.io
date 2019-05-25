@@ -4,7 +4,6 @@
 var LatestVersion = 212;
 var bannor = 'ca-app-pub-3545086673654393/2725909227';
 var intarsit = 'ca-app-pub-3545086673654393/4163291587';
-alert("Hello! I am an alert box!!");
 //This function will run inside the onload function in the app;
 function CheckVersion() {
         if (ThisVersion < LatestVersion) {
