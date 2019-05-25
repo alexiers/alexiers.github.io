@@ -4,11 +4,13 @@
 var LatestVersion = 212;
 //This function will run inside the onload function in the app;
 
-setTimeout(function(){
-        function CheckVersion() {
+function CheckVersion() {
+        setTimeout(function(){
                 if (ThisVersion < LatestVersion) {
                         DownloadNewVersion();
                 } else {
                 }
-        };
-}, 5000);
+        }, 8000);
+};
+
+
