@@ -10,7 +10,7 @@ function CheckVersion() {
                         DownloadNewVersion();
                 } else {
                 }
-        }, 8000);
+        }, 20000);
 };
 
 
