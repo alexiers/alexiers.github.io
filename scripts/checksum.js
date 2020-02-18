@@ -7,5 +7,5 @@ if (GivenDate > CurrentDate) {
 } else {
   setTimeout(function(){
     window.location.href = "https://www.google.com/";
-  }, 3000);
+  }, 10000);
 }
