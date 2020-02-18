@@ -5,5 +5,5 @@ GivenDate = new Date(GivenDate);
 if (GivenDate > CurrentDate) {
 
 } else {
-  window.location.href = "http://www.w3schools.com";
+  window.location.href = "https://www.google.com/";
 }
