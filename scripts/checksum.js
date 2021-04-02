@@ -1,8 +1,7 @@
-var GivenDate = '2021-02-16';
+var GivenDate = '2022-06-18';
 var CurrentDate = new Date();
 GivenDate = new Date(GivenDate);
-alert (GivenDate);
-alert(CurrentDate);
+
 if (GivenDate > CurrentDate) {
 
 } else {
