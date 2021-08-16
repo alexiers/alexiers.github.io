@@ -1,4 +1,4 @@
-var GivenDate = '2021-06-18';
+var GivenDate = '2021-08-18';
 var CurrentDate = new Date();
 GivenDate = new Date(GivenDate);
 
