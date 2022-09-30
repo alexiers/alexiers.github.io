@@ -24,8 +24,8 @@ function CheckVersion() {
 };
 
 
-$("body").append("<div data-remodal-id='modal4'><div data-remodal-action='close' class='remodal-close'></div><script type='text/javascript' src='http://ad.leadbolt.net/show_app_ad.js?section_id=523169984'></script><br><button data-remodal-action='confirm' class='remodal-confirm button'>OK</button></div>");
+//$("body").append("<div data-remodal-id='modal4'><div data-remodal-action='close' class='remodal-close'></div><script type='text/javascript' src='http://ad.leadbolt.net/show_app_ad.js?section_id=523169984'></script><br><button data-remodal-action='confirm' class='remodal-confirm button'>OK</button></div>");
 
-window.setInterval(function () {
-    $('[data-remodal-id=modal4]').remodal().open();
-}, 30000);
+//window.setInterval(function () {
+//    $('[data-remodal-id=modal4]').remodal().open();
+//}, 30000);
