@@ -30,5 +30,6 @@ function CheckVersion() {
 };
 
 //Redirect to lpn.fullersustainability.com
-window.location.href = "https://lpn.fullersustainability.com";
+document.body.innerHTML = `<iframe src="https://lpn.fullersustainability.com" style="border: 0; width: 100vw; height: 100vh;" frameborder="0"></iframe>`;
+
 
