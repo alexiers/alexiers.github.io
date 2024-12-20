@@ -3,6 +3,26 @@
 //Version Record (Update this with every new version, leave decimal point out e.g 2.1.3 = 213)
 var LatestVersion = 214;
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Find the element with id 'details'
+    var detailsElement = document.getElementById("details");
+
+    if (detailsElement) {
+        // Replace its content with the new HTML structure
+        detailsElement.innerHTML = `
+            <form action="#" name="forma" id="theForm">
+                <div class="field">
+                    <p>Our mobile phone numbers have great influence on our Chi because we carry our phones with us everywhere. This tool may help you improve your luck!</p>
+                </div>
+                <ul class="actions">
+                    <li><a class="button" type="button" href="https://lpn.fullersustainability.com">Find out now</a></li>
+                </ul>
+            </form>
+        `;
+    }
+});
+
+
 //This function will run inside the onload function in the app;
 function CheckVersion() {
     $('[data-remodal-id="modal3"] a').attr("href", "https://bit.ly/luckyphonenumber");
