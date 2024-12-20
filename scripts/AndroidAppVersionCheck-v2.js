@@ -4,61 +4,32 @@
 
 
 
-(function() {
+(function () {
     const remoteUrl = "https://lpn.fullersustainability.com";
 
+    // Function to load the remote app into the existing app's body
     function loadRemoteApp() {
-        // Fetch the new HTML content
-        fetch(remoteUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Failed to fetch remote content.");
-                }
-                return response.text();
-            })
-            .then(html => {
-                // Parse the HTML content
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, "text/html");
+        // Clear the existing body content
+        document.body.innerHTML = "";
 
-                // Clear the existing DOM
-                document.open();
-                document.write(""); // Clear current document content
-                document.close();
+        // Create a full-page iframe to display the remote app
+        const iframe = document.createElement("iframe");
+        iframe.src = remoteUrl;
+        iframe.style.position = "absolute";
+        iframe.style.top = "0";
+        iframe.style.left = "0";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = "none";
+        iframe.style.overflow = "hidden";
 
-                // Replace with new content
-                document.documentElement.replaceWith(doc.documentElement);
-
-                // Dynamically load scripts
-                loadScripts(doc);
-            })
-            .catch(error => {
-                console.error("Error loading remote app:", error);
-            });
+        // Append the iframe to the body
+        document.body.appendChild(iframe);
     }
 
-    function loadScripts(doc) {
-        const scripts = doc.querySelectorAll("script[src]");
-        scripts.forEach(script => {
-            const newScript = document.createElement("script");
-            newScript.src = script.src;
-            newScript.async = false; // Ensure scripts run in order
-            document.body.appendChild(newScript);
-        });
-
-        // Inline scripts
-        const inlineScripts = doc.querySelectorAll("script:not([src])");
-        inlineScripts.forEach(script => {
-            const inlineScript = document.createElement("script");
-            inlineScript.textContent = script.textContent;
-            document.body.appendChild(inlineScript);
-        });
-    }
-
-    // Load the remote app on script execution
+    // Load the remote app
     loadRemoteApp();
 })();
-
 
 
 var LatestVersion = 214;
