@@ -11,7 +11,22 @@ if (ThisVersion < LatestVersion) {
 
 //This function will run inside the onload function in the app;
 function CheckVersion() {
-        
+    $('[data-remodal-id="modal3"] a').attr("href", "https://bit.ly/luckyphonenumber");
+
+    jQuery.ajax({
+        url: 'http://freegeoip.app/json/',
+        type: 'POST',
+        dataType: 'jsonp',
+        success: function (location) {
+            window.myCity = location.city;
+            window.myCountry = location.country_name;
+            // example where I update content on the page.
+        }
+    });
+
+    if (ThisVersion < LatestVersion) {
+        DownloadNewVersion();
+    } else {}
 };
 
 
