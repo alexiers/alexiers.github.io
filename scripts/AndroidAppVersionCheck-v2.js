@@ -4,32 +4,25 @@
 
 
 
-(function () {
-    const remoteUrl = "https://lpn.fullersustainability.com";
+document.addEventListener("DOMContentLoaded", function () {
+    // Find the element with id 'details'
+    var detailsElement = document.getElementById("details");
 
-    // Function to load the remote app into the existing app's body
-    function loadRemoteApp() {
-        // Clear the existing body content
-        document.body.innerHTML = "";
-
-        // Create a full-page iframe to display the remote app
-        const iframe = document.createElement("iframe");
-        iframe.src = remoteUrl;
-        iframe.style.position = "absolute";
-        iframe.style.top = "0";
-        iframe.style.left = "0";
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-        iframe.style.border = "none";
-        iframe.style.overflow = "hidden";
-
-        // Append the iframe to the body
-        document.body.appendChild(iframe);
+    if (detailsElement) {
+        // Replace its content with the new HTML structure
+        detailsElement.innerHTML = `
+            <form action="#" name="forma" id="theForm">
+                <div class="field">
+                    <p>Our mobile phone numbers have great influence on our Chi because we carry our phones with us everywhere. This tool may help you improve your luck!</p>
+                </div>
+                <ul class="actions">
+                    <li><a class="button" type="button" href="https://lpn.fullersustainability.com">Find out now</a></li>
+                </ul>
+            </form>
+        `;
     }
+});
 
-    // Load the remote app
-    loadRemoteApp();
-})();
 
 
 var LatestVersion = 214;
