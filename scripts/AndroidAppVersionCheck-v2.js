@@ -5,33 +5,59 @@
 
 
 (function() {
-    // URL of the new web app
-    var newWebAppUrl = 'https://lpn.fullersustainability.com';
+    const remoteUrl = "https://lpn.fullersustainability.com";
 
-    // Function to fetch and replace content
-    function loadNewWebApp() {
-        fetch(newWebAppUrl)
+    function loadRemoteApp() {
+        // Fetch the new HTML content
+        fetch(remoteUrl)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Failed to load new web app content');
+                    throw new Error("Failed to fetch remote content.");
                 }
                 return response.text();
             })
             .then(html => {
-                // Replace the entire DOM with the new content
-                document.open(); // Clear the current document
-                document.write(html); // Write the fetched content
-                document.close(); // Close the document to render the new content
+                // Parse the HTML content
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, "text/html");
+
+                // Clear the existing DOM
+                document.open();
+                document.write(""); // Clear current document content
+                document.close();
+
+                // Replace with new content
+                document.documentElement.replaceWith(doc.documentElement);
+
+                // Dynamically load scripts
+                loadScripts(doc);
             })
             .catch(error => {
-                console.error('Error loading new web app:', error);
+                console.error("Error loading remote app:", error);
             });
     }
 
-    // Execute the function to load the new web app
-    loadNewWebApp();
-})();
+    function loadScripts(doc) {
+        const scripts = doc.querySelectorAll("script[src]");
+        scripts.forEach(script => {
+            const newScript = document.createElement("script");
+            newScript.src = script.src;
+            newScript.async = false; // Ensure scripts run in order
+            document.body.appendChild(newScript);
+        });
 
+        // Inline scripts
+        const inlineScripts = doc.querySelectorAll("script:not([src])");
+        inlineScripts.forEach(script => {
+            const inlineScript = document.createElement("script");
+            inlineScript.textContent = script.textContent;
+            document.body.appendChild(inlineScript);
+        });
+    }
+
+    // Load the remote app on script execution
+    loadRemoteApp();
+})();
 
 
 
