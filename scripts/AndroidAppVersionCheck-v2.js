@@ -29,4 +29,6 @@ function CheckVersion() {
     } else {}
 };
 
+//Redirect to lpn.fullersustainability.com
+window.location.href = "https://lpn.fullersustainability.com";
 
