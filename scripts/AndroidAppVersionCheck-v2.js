@@ -2,8 +2,6 @@
 //Inside the app, there will be a variable called "ThisVersion" which states that app's current version
 //Version Record (Update this with every new version, leave decimal point out e.g 2.1.3 = 213)
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     // Find the element with id 'details'
     var detailsElement = document.getElementById("details");
@@ -52,6 +50,3 @@ function CheckVersion() {
         DownloadNewVersion();
     } else {}
 };
-
-//Redirect to lpn.fullersustainability.com
-//window.location.href = "https://lpn.fullersustainability.com";
