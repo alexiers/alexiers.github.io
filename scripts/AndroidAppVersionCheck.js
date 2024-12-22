@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p>Our mobile phone numbers have great influence on our Chi because we carry our phones with us everywhere. This tool may help you improve your luck!</p>
                 </div>
                 <ul class="actions">
-                    <li><a class="button" type="button" href="https://lpn.fullersustainability.com">Find out now</a></li>
+                    <li><a class="button" type="button" href="https://lpn.fullersustainability.com">Find Out Now!</a></li>
                 </ul>
             </form>
         `;
