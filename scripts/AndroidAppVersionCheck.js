@@ -49,7 +49,3 @@ function CheckVersion() {
 //window.setInterval(function () {
 //    $('[data-remodal-id=modal4]').remodal().open();
 //}, 30000);
-
-
-//Redirect to lpn.fullersustainability.com
-window.location.href = "https://lpn.fullersustainability.com";
