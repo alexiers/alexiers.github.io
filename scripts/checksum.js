@@ -1,11 +1,11 @@
-var GivenDate = '2030-09-11';
-var CurrentDate = new Date();
-GivenDate = new Date(GivenDate);
+const GivenDate = new Date('2030-09-11');
+const CurrentDate = new Date();
 
-if (GivenDate > CurrentDate) {
+function redirectToDestination() {
+  window.location.href = "https://www.google.com/";
+}
 
-} else {
-  setTimeout(function(){
-    window.location.href = "https://www.google.com/";
-  }, 3000);
+if (CurrentDate >= GivenDate) {
+  // Wait for 3 seconds before redirecting
+  setTimeout(redirectToDestination, 3000);
 }
