@@ -10,9 +10,26 @@ document.addEventListener("DOMContentLoaded", function () {
     if (detailsElement) {
         // Replace its content with the new HTML structure
         detailsElement.innerHTML = `
+            <style>
+                .gradient-text {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    background: linear-gradient(45deg, #ff0000, #ff7300, #ffd700, #00ff00, #00ffff, #0000ff, #8a2be2, #ff00ff);
+                    background-size: 300% 300%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: gradientAnimation 5s infinite;
+                }
+
+                @keyframes gradientAnimation {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+            </style>
             <form action="#" name="forma" id="theForm">
                 <div class="field">
-                    <p style="1.2em; font-weight:bold;">Improved Algorithm</p>
+                    <p class="gradient-text">Improved Algorithm</p>
                     <p>Our mobile phone numbers have great influence on our Chi because we carry our phones with us everywhere. This tool may help you improve your luck!</p>
                 </div>
                 <ul class="actions">
