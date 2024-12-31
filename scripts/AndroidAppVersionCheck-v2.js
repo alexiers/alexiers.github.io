@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         detailsElement.innerHTML = `
             <form action="#" name="forma" id="theForm">
                 <div class="field">
+                    <p style="1.2em; font-weight:bold;">Improved Algorithm</p>
                     <p>Our mobile phone numbers have great influence on our Chi because we carry our phones with us everywhere. This tool may help you improve your luck!</p>
                 </div>
                 <ul class="actions">
